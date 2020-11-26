@@ -10,6 +10,7 @@ for i in range(1016,7937+1):
             
    k+=1
    M=i
+
 print(k,M)
 
 2.	Кол-во и минимум
@@ -22,12 +23,13 @@ for i in range(1016,7937+1):
          
     if M>i:
         M=i
+
 print(k,M)
 
 Задание 22 (Находим число x)
 for y in range (100,999):
-    
- x=y   
+    x=y   
+
 L=n   
 M=n
 
@@ -57,6 +59,7 @@ for i in range(1,len(s)):
     else:
         
          k=1
+
 print(m) 
 
 2.	Последовательность одной буквы
@@ -78,6 +81,7 @@ for i in range(1,len(s)):
      else:
         
           k=0
+
 print(m)
 
 Задание 25: (2 Вида)
