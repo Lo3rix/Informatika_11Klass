@@ -27,17 +27,19 @@ for i in range(1016,7937+1):
 print(k,M)
 
 Задание 22 (Находим число x)
-for y in range (100,999):
-    x=y   
+for y in range(0,400):
+    x = y
+    a = 0
+    b = 1
 
-L=n   
-M=n
-
-функция    
-
-if L == k and M == k:
-            
-   print (x)
+    while x > 0:
+        if x % 2 > 0:
+            a += x % 12
+        else: 
+            b *= x % 12
+        x = x // 12
+        if a == 5 and b == 16:
+            print(x)
 
 Задание 24: (3 Вида)
 1.	Cреди которых каждые два соседних различны.
