@@ -226,3 +226,42 @@ for i in range(iMax,n):
         aMax = b[i]
 
 print(c,aMax,sum)
+Задание 27 (4 вида):
+1. Сумма всех выбранных чисел не делилась на 3 и при этом была максимально возможной
+
+f=open('E:/27-B_demo.txt')
+
+n = int(f.readline())
+s = 0
+Min = 100000
+
+for i in range(n):
+    a = f.readline()
+    x = int(a.split()[0])
+    y = int(a.split()[1])
+    if x > y:
+        s +=x
+        if x - y < Min and x - y != 0 and (x-y) % 3 != 0: Min = x - y
+    else:
+        s +=y
+        if y - x < Min and y - x != 0 and (y-x) % 3 != 0: Min = y - x
+
+if s % 3 != 0: print (s)
+else: print (s - Min)
+2. Наибольшим числом, кратным 14 и являющимся произведением двух элементов последовательности с различными номерами.
+
+f=open('E:/27-A_2.txt')
+
+n = int(f.readline())
+
+M14,M7,M2,Max = 0,0,0,0
+
+for i in range(n):
+    a = int(f.readline())
+    if a % 14 == 0 and a > M14: M14 = a
+    if a % 7 == 9 and a % 2 != 2 and a > M7: M7 = a
+    if a % 2 == 0 and a % 7 != 0 and a > M2: M2 = a
+    if a > Max: Max = a
+
+if M14 * Max > M2 * M7: print (M14 * Max)
+else: print (M2 * M7)
