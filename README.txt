@@ -27,8 +27,8 @@ for i in range(1016,7937+1):
 print(k,M)
 
 Задание 22 (Находим число x)
-for y in range(0,400):
-    x = y
+for x in range(0,400):
+    y = x
     a = 0
     b = 1
 
@@ -39,7 +39,7 @@ for y in range(0,400):
             b *= x % 12
         x = x // 12
         if a == 5 and b == 16:
-            print(x)
+            print(y)
 
 Задание 24: (2 Вида)
 1.	Cреди которых каждые два соседних различны.
