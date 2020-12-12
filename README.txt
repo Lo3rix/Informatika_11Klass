@@ -66,31 +66,44 @@ print(m)
 
 2.	Последовательность одной буквы
 f=open('D:/24.txt')
-
 s=f.readline()
-
 m=0
 k=0
-
-for i in range(1,len(s)):
-    
-     if s[i]=="R":
-         
-         k+=1
-         
-         m=max(m, k)
-    
-     else:
-        
+for i in range(1,len(s)):    
+     if s[i]=="R":        
+         k+=1         
+         m=max(m, k)    
+     else:        
           k=0
-
 print(m)
-
+3.	Нахождение комбинации (с вхождением в слово)
+f = open('E:/24-j5.txt')
+s = str(f.readline())
+f.close()
+while 'STOCK' in s:
+    t = s.find('STOCK')
+    s = s[:t] + '$' + s[t+5:]
+c = 0
+while 'KTO' in s:
+    c += 1
+    t = s.find('KTO')
+    s = s[:t] + '$' + s[t+3:]
+print(c)
+4.	Нахождение комбинации (без вхождения в слово)
+f = open('E:/24-j5.txt')
+s = str(f.readline())
+f.close()
+c = 0
+while 'KTO' in s:
+    c += 1
+    t = s.find('KTO')
+    s = s[:t] + '$' + s[t+3:]
+print(c)
 Задание 25: (7 Видов)
 1.	 Несколько делителей (делитель четный):
 a={}
 
-for i in range(95632,95700):
+for i in range(95632,95700+1):
     n= 0   
     for g in range(1, i + 1):         
         if i % g == 0 and g % 2 == 0:           
@@ -115,7 +128,7 @@ for i in range(489421,489440 + 1):
 3.	Несколько делителей (при этом единица и само число не считается + любой делитель):
 a={}
 
-for i in range(174457,174506):
+for i in range(174457,174506+1):
     n= 0 
     for g in range(2, i - 1):        
         if i % g == 0:             
