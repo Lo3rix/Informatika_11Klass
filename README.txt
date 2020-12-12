@@ -44,24 +44,15 @@ for x in range(0,400):
 Задание 24: (2 Вида)
 1.	Cреди которых каждые два соседних различны.
 f=open('D:/24.txt')
-
 s=f.readline()
-
 m=1
 k=1
-
-for i in range(1,len(s)):
-    
-    if s[i]!=s[i-1]:
-        
-        k+=1
-        
-        m=max(k,m)
-    
-    else:
-        
+for i in range(1,len(s)):    
+    if s[i]!=s[i-1]:        
+        k+=1       
+        m=max(k,m)    
+    else:        
          k=1
-
 print(m) 
 
 2.	Последовательность одной буквы
