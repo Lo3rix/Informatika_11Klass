@@ -101,15 +101,17 @@ print(c)
 Задание 25: (7 Видов)
 0.def deliteli_sq(x):
     a = [] # объявление а-ля динамический массив
-    for i in range(1,int(x**0.5)+1): #sqrt(x) == x**0.5
+    for i in range(2,int(x**0.5)+1): #sqrt(x) == x**0.5
         if x%i == 0:
             a.append(i) # добавление в список
             if i != x//i:# ачтобы 2 раза не добавить корень
                 a.append(x//i)
     #не сортированный результат
-    return sorted(a) #list(set(a))  
-# set - это множество
-# множество - это всегда набор УНИКАЛЬНЫХ элементов
+    return sorted(a) #list(set(a))
+for i in range(600,141250+1):
+    res = deliteli_sq(i)
+    if len(res) == 3:
+        print(res)
 1.	 Несколько делителей (делитель четный):
 a={}
 
