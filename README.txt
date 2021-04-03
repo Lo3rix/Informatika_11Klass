@@ -6,7 +6,22 @@ while s.find('3333')>-1 or s.find('8888')>-1:
     s = s.replace('3333','88',1)
   else:
     s = s.replace('8888','33',1)
-print(s)    
+print(s)
+Задание 16. 
+s = 0
+def G( n ):
+    global s
+    s = s + (n+2)
+    if n > 1:
+        s = s + (n+6)
+        G(n-1)
+        G(n-2)
+for n in range(100):
+    s = 0
+    G(n)
+    if s > 120000:
+        break
+print(n, s)
 Задание 17:
 1.	Кол-во и максимум
 k=0
