@@ -127,6 +127,17 @@ for i in range(600,141250+1):
     res = deliteli_sq(i)
     if len(res) == 3:
         print(res)
+Супер короткий вариант с оптимизацией:
+for i in range(19960,20001):
+    sqri=int(i**0.5)
+    a = []
+    for j in range(2,sqri+1):
+        if i % j == 0:
+            a.append(j)
+            if j != i//j:
+                a.append(i//j)
+    if len(a) == 2:
+        print(a)
 1.	 Несколько делителей (делитель четный):
 a={}
 
