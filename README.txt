@@ -24,7 +24,6 @@ def dell(n,m):
  return n % m == 0
  
 for A in range(1,100):
- while True:
   found = False
   for x in range(1, произведение всех известных чисел +1):
    if not (вся функция, при этом если дано не - это ((not функция)) импликация - это <=):
