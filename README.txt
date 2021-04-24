@@ -7,6 +7,31 @@ while s.find('3333')>-1 or s.find('8888')>-1:
   else:
     s = s.replace('8888','33',1)
 print(s)
+Задание 15. 1)
+for A in range(-100,400):
+ flag = 0
+ for x in range(0,101):
+  for y in range(0,101):
+   if (функция) or (функция) == False:
+    flag = 1
+    break
+  if flag == 1:
+   break
+ if flag == 0:
+  print(A)
+2)
+def dell(n,m):
+ return n % m == 0
+ 
+for A in range(1,100):
+ while True:
+  found = False
+  for x in range(1, произведение всех известных чисел +1):
+   if not (вся функция, при этом если дано не - это ((not функция)) импликация - это <=):
+    found = True
+    break
+  if not found:
+   print(A)
 Задание 16. 
 s = 0
 def G( n ):
