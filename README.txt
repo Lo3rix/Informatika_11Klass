@@ -341,20 +341,22 @@ for i in range(n):
 
 if s % 3 != 0: print (s)
 else: print (s - Min)
-2. Наибольшим числом, кратным 14 и являющимся произведением двух элементов последовательности с различными номерами.
-
-f=open('E:/27-A_2.txt')
-
+2. 
+f = open("E:/27-29b.txt")
 n = int(f.readline())
-
-M14,M7,M2,Max = 0,0,0,0
-
+s = 0
+m=100000000000
 for i in range(n):
-    a = int(f.readline())
-    if a % 14 == 0 and a > M14: M14 = a
-    if a % 7 == 9 and a % 2 != 2 and a > M7: M7 = a
-    if a % 2 == 0 and a % 7 != 0 and a > M2: M2 = a
-    if a > Max: Max = a
+    x,y,z = map(int,f.readline().split())
+    kz = [x,y,z]
+    kz.sort()
+    s += kz[2]
+    if (kz[2] - kz[1]) % 5 != 0 and (kz[2]-kz[1]) <m:
+        m = kz[2] - kz[1]
+    if (kz[2] - kz[0]) % 5 != 0 and (kz[2]-kz[0]) <m:
+        m = kz[2] - kz[0]
 
-if M14 * Max > M2 * M7: print (M14 * Max)
-else: print (M2 * M7)
+if(s%5!=0):
+    print(s)
+else:
+    print(s-m)
