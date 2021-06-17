@@ -7,6 +7,13 @@ while s.find('3333')>-1 or s.find('8888')>-1:
   else:
     s = s.replace('8888','33',1)
 print(s)
+Задание 14.
+n = 16677181742713263
+b = '' 
+while n > 0:
+    b = str(n % 3) + b
+    n = n // 3
+print(b)
 Задание 15. 1)
 for A in range(-100,400):
  flag = 0
