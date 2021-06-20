@@ -162,6 +162,20 @@ while 'KTO' in s:
     t = s.find('KTO')
     s = s[:t] + '$' + s[t+3:]
 print(c)
+5. 
+f = open("E:/")
+lines = f.readlines()
+s = ''
+for line in lines:
+    if line.count('G') < s.count('G'):
+        s = line
+a = {}
+for i in range(len(s)):
+    if s[i] not in a:
+        a[s[i]] = 1
+    else:
+        a[s[i]] += 1
+print(a)
 Задание 25: (7 Видов)
 0.def deliteli_sq(x):
     a = [] # объявление а-ля динамический массив
