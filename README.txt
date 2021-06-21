@@ -38,6 +38,27 @@ for A in range(1,100):
     break
   if not found:
    print(A)
+3)Отрезки:
+p1, p2, q1, q2 = 8, 16, 25, 40
+
+P = [i / 10 for i in range(p1 * 10, p2 * 10 +1)]
+Q = [i / 10 for i in range(q1 * 10, q2 * 10 +1)]
+
+def f(x,A):
+    return ((x in P) + (x in Q)) <= (x in A)
+
+Если мин:
+A = set ()
+for x in [i / 10 for i in range(10, 401)]:
+    if not f(x,A):
+        A.add(x)
+Если макс:
+A = set ([i / 10 for i in range(10, 201)])
+for x in [i / 10 for i in range(10, 201)]:
+    if not f(x,A):
+        A.remove(x)
+
+print(sorted(A))
 Задание 16. 
 s = 0
 def G( n ):
