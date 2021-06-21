@@ -59,6 +59,19 @@ for x in [i / 10 for i in range(10, 201)]:
         A.remove(x)
 
 print(sorted(A))
+
+Тождественно:
+import itertools
+
+def f(x,y,A):
+    return ((x in A) <= (x * x <= 81)) * ((y * y <= 36) <= (y in A))
+
+A = set(range(-100, 100))
+for x, y in itertools.product(range(-100,100), repeat=2):
+    if not f(x,y,A):
+        A.remove(x)
+
+print(sorted(A))
 Задание 16. 
 s = 0
 def G( n ):
@@ -118,21 +131,6 @@ for i in range(1016,7937+1):
         M=i
 
 print(k,M)
-
-Задание 22 (Находим число x)
-for x in range(0,400):
-    y = x
-    a = 0
-    b = 1
-
-    while x > 0:
-        if x % 2 > 0:
-            a += x % 12
-        else: 
-            b *= x % 12
-        x = x // 12
-        if a == 5 and b == 16:
-            print(y)
 
 Задание 24: (2 Вида)
 1.	Cреди которых каждые два соседних различны.
@@ -235,32 +233,7 @@ for i in range(95632,95700+1):
              a[n] = g
     if n == 6:   
         print (a[1],a[2],a[3],a[4],a[5],a[6])
-2. Несколько делителей (В порядке возрастания)
-a = {}
-for i in range(489421,489440 + 1):
-    n=0
-    for g in range(1, i + 1):
-        if i % g == 0:
-             n += 1
-             if n > 4:
-                 break
-             a[n]=g
-    if n == 4:    
-        print (a[1],a[2],a[3],a[4])
-3.	Несколько делителей (при этом единица и само число не считается + любой делитель):
-a={}
-
-for i in range(174457,174506+1):
-    n= 0 
-    for g in range(2, i - 1):        
-        if i % g == 0:             
-             n += 1               
-             if n > 2:              
-                 break
-             a[n] = g    
-    if n == 2:            
-        print (a[1],a[2])
-4. Несколько делителей (найти кол-во и минимальное):
+2. Несколько делителей (найти кол-во и минимальное):
 min, max = 0,0
 
 for i in range(568023,569230+1):
@@ -273,20 +246,7 @@ for i in range(568023,569230+1):
             min = i
 
 print(max,min)
-5.	Несколько делителей (делители для каждого числа в порядке возрастания):
-a = {}
-
-for i in range(201455,201470+1):
-    n = 0
-    for g in range(1,i+1):
-        if i % g == 0:
-            n += 1
-            if n <= 4: a[n] = g
-            else: break
-    if n == 4:
-        sorted(a)
-        print(a)
-6.	Нахождение простых чисел (В порядке возрастания + слева его номер):
+3.	Нахождение простых чисел (В порядке возрастания + слева его номер):
 a = {}
 k = 0
 b = False
@@ -329,7 +289,7 @@ while s - b[i] >=0:
 
 print(c,aMax,sum)
 
-1.	 Если остается свободное место (Универсальная)
+2.	 Если остается свободное место (Универсальная)
 f=open('E:28132.txt')
 
 a=f.readline()
@@ -361,29 +321,8 @@ for i in range(iMax,n):
         aMax = b[i]
 
 print(c,aMax,sum)
-Задание 27 (4 вида):
-1. Сумма всех выбранных чисел не делилась на 3 и при этом была максимально возможной
-
-f=open('E:/27-B_demo.txt')
-
-n = int(f.readline())
-s = 0
-Min = 100000
-
-for i in range(n):
-    a = f.readline()
-    x = int(a.split()[0])
-    y = int(a.split()[1])
-    if x > y:
-        s +=x
-        if x - y < Min and x - y != 0 and (x-y) % 3 != 0: Min = x - y
-    else:
-        s +=y
-        if y - x < Min and y - x != 0 and (y-x) % 3 != 0: Min = y - x
-
-if s % 3 != 0: print (s)
-else: print (s - Min)
-2. 
+Задание 27:
+1. 
 f = open("E:/27-29b.txt")
 n = int(f.readline())
 s = 0
