@@ -263,64 +263,11 @@ for i in range(2422000,2422080+1):
         k += 1
         a[k] = i 
         print(k, a[k])
-Задание 26: (2 вида) (Обязательно проверять осталось ли свободное   место)
-1.	 Если не остается свободного места
-f=open('E:28132.txt')
-
-a=f.readline()
-s = int(a.split()[0])
-n = int(a.split()[1])
-
-b = []
-
-for i in range(n):
-    b.append(int(f.readline()))   
-
-b.sort()
-
-i,c,aMax,sum = 0,0,0,0
-
-while s - b[i] >=0:
-    sum += b[i]
-    s -= b[i]   
-    c += 1
-    aMax = b[i]
-    i += 1
-
-print(c,aMax,sum)
-
-2.	 Если остается свободное место (Универсальная)
-f=open('E:28132.txt')
-
-a=f.readline()
-s = int(a.split()[0])
-n = int(a.split()[1])
-
-b = []
-
-for i in range(n):
-    b.append(int(f.readline()))
-    
-b.sort()
-
-i,c,aMax,sum,s0,iMax = 0,0,0,0,s,0
-
-while s - b[i] >=0:
-    sum += b[i]    
-    s -= b[i]       
-    c += 1    
-    iMax = i
-    aMax = b[i]
-    i += 1
-
-s = sum - aMax
-
-for i in range(iMax,n):
-    
-    if s + b[i] <= s0: 
-        aMax = b[i]
-
-print(c,aMax,sum)
+Задание 26: 
+f = open
+n = int(f.readline())
+a = [int(f.readline)) for i in range(n)]
+print(a[2: 5])
 Задание 27:
 1. 
 f = open("E:/27-29b.txt")
