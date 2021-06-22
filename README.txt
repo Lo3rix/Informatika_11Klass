@@ -196,19 +196,19 @@ for i in range(len(s)):
         a[s[i]] += 1
 print(a)
 Задание 25: (7 Видов)
-0.def deliteli_sq(x):
-    a = [] # объявление а-ля динамический массив
-    for i in range(2,int(x**0.5)+1): #sqrt(x) == x**0.5
-        if x%i == 0:
-            a.append(i) # добавление в список
-            if i != x//i:# ачтобы 2 раза не добавить корень
-                a.append(x//i)
-    #не сортированный результат
-    return sorted(a) #list(set(a))
-for i in range(600,141250+1):
-    res = deliteli_sq(i)
-    if len(res) == 3:
-        print(res)
+0.
+def AllDivs(x):
+    divs = [1,x]
+    for d in range(2, int(x**0.5)+1):
+        if x % d == 0:
+            divs += [d]
+            if x // d != d:
+                divs += [x//d]
+    divs.sort()
+    return divs
+
+for i in range(20, 30):
+    print(i, AllDivs(i))
 Супер короткий вариант с оптимизацией:
 for i in range(19960,20001):
     sqri=int(i**0.5)
