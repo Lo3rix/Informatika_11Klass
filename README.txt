@@ -263,6 +263,27 @@ for i in range(2422000,2422080+1):
         k += 1
         a[k] = i 
         print(k, a[k])
+
+def prost(x):
+    for i in range(2,x):
+        if x % i == 0:
+            return True
+    return False
+
+def AllDivs(x):
+    divs = [1,x]
+    for i in range(2, int(x**0.5)+1):
+        if x % i == 0:
+            if prost(i):
+                divs += [i]
+            if x // i != i and prost(x//i):
+                divs += [x//i]
+    divs.sort()
+    return divs
+
+for i in range(350000, 350300):
+    print(i, AllDivs(i))
+
 Задание 26: 
 f = open
 n = int(f.readline())
