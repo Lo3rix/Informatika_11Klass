@@ -313,3 +313,38 @@ if(s%5!=0):
     print(s)
 else:
     print(s-m)
+
+2.
+f = open("E:/27A_11_1.txt")
+a = []
+n = int(f.readline())
+kr34 = 0
+kr2 = 0
+kr17 = 0
+nekr = 0
+para = 0
+for i in range(5):
+    x=int(f.readline())
+    a.append(x)
+for i in range(n-5):
+    if a[0] % 34 == 0:
+        kr34+=1
+    elif a[0] % 17 == 0:
+        kr17+=1
+    elif a[0] % 2 == 0:
+        kr2+=1
+    else:
+        nekr += 1
+    x=int(f.readline())
+    if x % 34 == 0:
+        para += (kr2+kr17+kr34+nekr)
+    elif x % 2 == 0:
+        para += (kr17+kr34)
+    elif x % 17 == 0:
+        para += (kr2+kr34)
+    else:
+        para += kr34
+    del a[0]
+    a.append(x)
+print(para)
+3.
