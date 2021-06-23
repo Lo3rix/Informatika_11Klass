@@ -166,19 +166,6 @@ for i in range(1,len(s)):
      else:        
           k=0
 print(m)
-3.	Нахождение комбинации (с вхождением в слово)
-f = open('E:/24-j5.txt')
-s = str(f.readline())
-f.close()
-while 'STOCK' in s:
-    t = s.find('STOCK')
-    s = s[:t] + '$' + s[t+5:]
-c = 0
-while 'KTO' in s:
-    c += 1
-    t = s.find('KTO')
-    s = s[:t] + '$' + s[t+3:]
-print(c)
 4.	Нахождение комбинации (без вхождения в слово)
 f = open('E:/24-j5.txt')
 s = str(f.readline())
@@ -204,19 +191,6 @@ for i in range(len(s)):
         a[s[i]] += 1
 print(a)
 Задание 25: (7 Видов)
-0.
-def AllDivs(x):
-    divs = [1,x]
-    for d in range(2, int(x**0.5)+1):
-        if x % d == 0:
-            divs += [d]
-            if x // d != d:
-                divs += [x//d]
-    divs.sort()
-    return divs
-
-for i in range(20, 30):
-    print(i, AllDivs(i))
 Супер короткий вариант с оптимизацией:
 for i in range(19960,20001):
     sqri=int(i**0.5)
@@ -272,6 +246,7 @@ for i in range(2422000,2422080+1):
         a[k] = i 
         print(k, a[k])
 
+4.
 def prost(x):
     for i in range(2,x):
         if x % i == 0:
@@ -291,6 +266,27 @@ def AllDivs(x):
 
 for i in range(350000, 350300):
     print(i, AllDivs(i))
+
+5.
+def AllDivs(x):
+    divs = [1,x]
+    for i in range(2, int(x**0.5)+1):
+        if x % i == 0:
+            divs.append(i)
+            if x // i != i:
+                divs.append(x//i)
+    divs.sort()
+    return divs
+
+for x in range(452022, 452065):
+    s = AllDivs(x)
+    p = s[1]+s[-2]
+    if p > x:
+        pass
+    else:
+        k = s[1]+s[-2]
+    if k % 7 == 3:
+        print(x,k)
 
 Задание 26: 
 f = open
