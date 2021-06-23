@@ -348,3 +348,15 @@ for i in range(n-5):
     a.append(x)
 print(para)
 3.
+f = open("E:/24.txt")
+a = [0]*6
+n = int(f.readline())
+for i in range(n):
+    x=int(f.readline())
+    ost6 = x % 6
+    a[ost6]=a[ost6]+1
+s = 0
+for i in range(1,3):
+    s = s * (a[i] * a[6-i])
+s += a[0]*(a[0]-1)//2 + a[3] * (a[3]-1)//2
+print(s)
