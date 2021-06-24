@@ -113,33 +113,6 @@ for n in range(1,1001):
         if k == len(x):
             c += 1
 print(c)
-Задание 17:
-1.	Кол-во и максимум
-k=0
-M=1
-
-for i in range(1016,7937+1):
-  
- if i % 3 == 0 and i % 7 != 0 and i % 17 != 0 and i % 19 != 0 and i % 27 != 0:    
-            
-   k+=1
-   M=i
-
-print(k,M)
-
-2.	Кол-во и минимум
-k=0
-M=7937
-
-for i in range(1016,7937+1):
-    if i % 3 == 0 and i % 7 != 0 and i % 17 != 0 and i % 19 != 0 and i % 27 != 0:    
-        k+=1
-         
-    if M>i:
-        M=i
-
-print(k,M)
-
 Задание 24: (2 Вида)
 1.	Cреди которых каждые два соседних различны.
 f=open('D:/24.txt')
@@ -153,19 +126,6 @@ for i in range(1,len(s)):
     else:        
          k=1
 print(m) 
-
-2.	Последовательность одной буквы
-f=open('D:/24.txt')
-s=f.readline()
-m=0
-k=0
-for i in range(1,len(s)):    
-     if s[i]=="R":        
-         k+=1         
-         m=max(m, k)    
-     else:        
-          k=0
-print(m)
 3.
 f = open()
 s = f.readline()
@@ -301,12 +261,14 @@ for x in range(452022, 452065):
         k = s[1]+s[-2]
     if k % 7 == 3:
         print(x,k)
-
-Задание 26: 
-f = open
-n = int(f.readline())
-a = [int(f.readline)) for i in range(n)]
-print(a[2: 5])
+6. 
+for x in range(100,300+1):
+    c = 0
+    for d in range(2,x):
+        if x % d == 0:
+            c += 1
+    if c == 0:
+        print(x)
 Задание 27:
 1. 
 f = open("E:/27-29b.txt")
