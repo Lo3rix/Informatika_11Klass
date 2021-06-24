@@ -350,16 +350,30 @@ for i in range(n-5):
     del a[0]
     a.append(x)
 print(para)
-3.
-f = open("E:/24.txt")
-a = [0]*6
+2.1
+f = open("E:/27A_11_1.txt")
 n = int(f.readline())
+kr6 = 0
+kr3 = 0
+kr2 = 0
 for i in range(n):
-    x=int(f.readline())
-    ost6 = x % 6
-    a[ost6]=a[ost6]+1
-s = 0
-for i in range(1,3):
-    s = s * (a[i] * a[6-i])
-s += a[0]*(a[0]-1)//2 + a[3] * (a[3]-1)//2
-print(s)
+   x=int(f.readline())
+   if x % 6 == 0:
+        kr6+=1
+   elif x % 3 == 0:
+        kr3+=1
+   elif x % 2 == 0:
+        kr2+=1
+print(kr2*kr3+kr6*(n-kr6)+kr6*(kr6-1)//2)
+3.
+f = open()
+n = int(f.readline())
+a = []
+for i in range(n):
+    a.append(int(f.readline()))
+otrezok = 0
+for i in range(n-1):
+    for j in range(i+1, n):
+        if sum(a[i:j+1])%73 == 0:
+            otrezok = max(otrezok, sum(a[i:j+1]))
+print(otrezok)
