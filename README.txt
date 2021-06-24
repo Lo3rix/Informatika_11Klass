@@ -166,6 +166,17 @@ for i in range(1,len(s)):
      else:        
           k=0
 print(m)
+3.
+f = open()
+s = f.readline()
+c = ''
+m = 0
+for i in range(len(s)):
+   c += s[i]
+   if 'AD' not in C:
+     m = max(len(c),m)
+   else:
+     c = 'D'
 4.	Нахождение комбинации (без вхождения в слово)
 f = open('E:/24-j5.txt')
 s = str(f.readline())
