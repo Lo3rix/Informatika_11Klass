@@ -202,19 +202,22 @@ for i in range(19960,20001):
                 a.append(i//j)
     if len(a) == 2:
         print(a)
-1.	 Несколько делителей (делитель четный):
-a={}
-
-for i in range(95632,95700+1):
-    n= 0   
-    for g in range(1, i + 1):         
-        if i % g == 0 and g % 2 == 0:           
-             n += 1             
-             if n > 6:              
-                 break
-             a[n] = g
-    if n == 6:   
-        print (a[1],a[2],a[3],a[4],a[5],a[6])
+1.:
+for x in range(3500,4000+1):
+    b = []
+    for g in range(2,int(x**0.5)+1):
+        if g * g == x:
+          if g % 2 != 0:
+              b.append(g)
+        elif x % g == 0:
+          if g % 2 != 0 :
+              b.append(g)
+          if (x//g) % 2 != 0:
+              b.append(x//g)
+          if len(b)>5:
+              break
+    if len(b)==5:
+        print(b, x)
 2. Несколько делителей (найти кол-во и минимальное):
 min, max = 0,0
 
